@@ -6,4 +6,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - run: mvn test-compile -pl dropwizard-jersey -am
-   - run: mvn -pl dropwizard-jersey test -Dtest=io.dropwizard.jersey.errors.LoggingExceptionMapperTest#handlesMethodNotAllowedWithHeaders
+   - run: mvn -pl dropwizard-jersey edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=io.dropwizard.jersey.errors.LoggingExceptionMapperTest#handlesMethodNotAllowedWithHeaders
