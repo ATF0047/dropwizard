@@ -1,0 +1,9 @@
+language: java
+on: [push]
+
+jobs:
+ check-bats-version:
+  runs-on: ubuntu-latest
+  steps:
+   - run: mvn test-compile -pl dropwizard-jersey -am
+   - run: mvn -pl dropwizard-jersey test -Dtest=io.dropwizard.jersey.errors.LoggingExceptionMapperTest#handlesMethodNotAllowedWithHeaders
